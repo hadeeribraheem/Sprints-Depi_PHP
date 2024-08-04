@@ -149,3 +149,36 @@ table, th, td {
 .new_row .additem.active {
     display: block;
 }
+.additem {
+    background: #28282a;
+    height: 101%;
+    width: 62%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 26px;
+    color: white;
+}
+.additem input{
+    padding: 2px;
+    margin: 1px 26px;
+    height: 42px;
+    width: 292px;
+    border-radius: 15px;
+}
+.additem h5 {
+    padding: 10px;
+    margin: 0 24px;
+}
+.additem button {
+    padding: 10px;
+    margin: auto;
+    border-radius: 15px;
+    width: 35%;
+    background-color: #e14f4f;
+    color: aliceblue;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
