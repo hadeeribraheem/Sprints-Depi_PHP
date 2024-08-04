@@ -1,0 +1,151 @@
+section{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.meetPizza{
+    margin: 20px;
+}
+.meetPizza h4{
+    font-weight: 200;
+    padding-bottom: 5px;
+}
+.meetPizza h1{
+    font-weight: 700;
+}
+.meetPizza h1 span{
+    font-style: italic;
+    color: #e14f4f;
+    font-weight: 500;
+}
+.meetPizza p{
+    padding: 0 185px;
+    margin: 16px;
+}
+/************************************/
+.video_header img {
+    display: block;
+    border-radius: 20px;
+    position: relative;
+}
+.video_header i {
+    background-color: #e14f4f;
+    height: 80px;
+    width: 80px;
+    font-size: 43px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 69%;
+    left: 47%;
+    cursor: pointer;
+    box-shadow: 0 15px 25px #e14f4f;
+}
+.video_header{
+    z-index: 99999999999;
+}
+.video_header i:hover {
+    opacity: 0.9;
+}
+.video_popup{
+    visibility: hidden;
+}
+.video_popup.active{
+    visibility: block;
+}
+.video_popup{
+    position: fixed;
+    top: 2%;
+    left: 24%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+.video_popup iframe{
+    width: 900px;
+}
+/*******************/
+.form_section{
+    background-color: #e14f4f;
+    color: white;
+}
+.form_section div:first-of-type{
+    margin-top: 45px;
+}
+.form_section div {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.form_section h3{
+    font-size: 22px;
+}
+.form_section div img{
+    width: 157px;
+    margin: 17px 0;
+}
+/*******************/
+.form_section{
+    height: 100vh;
+}
+.form_section form {
+    background: #28282a;
+    height: 116%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 26px;
+    margin-top: -103px;
+    margin-bottom: -70px;
+}
+
+.form_section h5 {
+    padding: 10px;
+    margin: 0 24px;
+}
+.form_section input{
+    padding: 10px;
+    margin: 12px 24px;
+    height: 42px;
+    border-radius: 15px;
+}
+.form_section textarea{
+    padding: 10px;
+    margin: 19px 23px;
+    height: 182px;
+    border-radius: 15px;
+}
+.form_section button{
+    padding: 10px;
+    margin: auto;
+    border-radius: 15px;
+    width: 20%;
+    background-color: #e14f4f;
+    color: aliceblue;
+    border: 0;
+    align-items: center;
+}
+table, th, td {
+    border:1px solid black;
+}
+.new_row button{
+    padding: 10px;
+    margin: 12px 24px; 
+    border-radius: 15px;
+    width: 20%;
+    background-color: #e14f4f;
+    color: aliceblue;
+    border: 0;
+}
+.new_row .additem{
+    display: none;
+}
+.new_row .additem.active {
+    display: block;
+}
