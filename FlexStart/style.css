@@ -1,6 +1,7 @@
 /* START OF colors & font */
 :root {
     --main_color: #012970;
+    --navbar_active:#4154f1;
 
 }
 
@@ -35,9 +36,62 @@ nav .btn{
 nav .btn:hover{
     opacity: 0.8;
 }
-.nav-item{
-    padding: 10px 6px;
+.nav-item a{
+    padding: 18px 12px !important;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
+.nav-item a:hover{
+    color: var(--navbar_active) !important;
+}
+.nav-item a i{
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+.nav-link{
+    color: var(--main_color) !important;
+}
+.nav-link.active {
+    color: var(--navbar_active) !important;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 1px;
+    min-width: 11rem !important;
+    padding: 10px 6px;
+    border-radius: 9px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.dropdown:hover .listingDropdown {
+    display: flex;
+    right: 30%;
+}
+
+/* .dropdown .listingDropdown {
+    margin: 0;
+    padding: 10px;
+    background: #ffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 130%;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+} */
 /*=============== END OF heading ================*/
 
 
@@ -53,3 +107,47 @@ nav .btn:hover{
 
 
 /********** Media Query *********/
+@media (max-width: 768px) {
+    .navbar .btn-primary {
+        order: 2;
+        margin: 0 15px 0 0;
+        margin-left: auto;
+        padding: 6px 15px;
+    }
+
+    .navbar-toggler {
+        order: 3;
+    }
+
+    .navbar-brand{
+        order: 1;
+        
+    }
+    /* REVISE IT in small sizes*/
+    .deepcontainerList .deepDropDown {
+        visibility: hidden;
+    }
+    .deepcontainerList:hover .deepDropDown {
+        position: absolute;
+        top: 0;
+        right: 102%;
+        visibility: visible;
+    }
+    .dropdown:hover .listingDropdown {
+        display: flex;
+        flex-direction: column;
+        right: 30%;
+    }
+}
+@media (min-width: 1200px) {
+    .deepcontainerList .deepDropDown {
+        visibility: hidden;
+    }
+    .deepcontainerList:hover .deepDropDown {
+        position: absolute;
+        top: 0;
+        right: 102%;
+        visibility: visible;
+    }
+
+}
