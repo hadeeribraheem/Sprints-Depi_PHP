@@ -1,0 +1,55 @@
+/* START OF colors & font */
+:root {
+    --main_color: #012970;
+
+}
+
+/* END OF colors & font */
+
+
+/********** START OF Public styles ************/
+body{
+    font-family: 'Nunito', sans-serif;
+}
+/********** END OF Public styles ************/
+
+/*=============== START OF heading ================*/
+/*-- Nav Bar --*/
+header{
+    padding: 20px 0;
+}
+nav .navbar-brand h1{
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--main_color);
+}
+nav .btn{
+    margin-left: 18px;
+    background-color: #4154f1;
+    padding: 8px 22px;
+    font-weight: 600;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+nav .btn:hover{
+    opacity: 0.8;
+}
+.nav-item{
+    padding: 10px 6px;
+}
+/*=============== END OF heading ================*/
+
+
+/*=============== START OF heading ================*/
+
+/*=============== END OF heading ================*/
+
+
+
+/*=============== START OF heading ================*/
+
+/*=============== END OF heading ================*/
+
+
+/********** Media Query *********/
