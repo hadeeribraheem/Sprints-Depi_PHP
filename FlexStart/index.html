@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
     
+    <!-- Roboto Font Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -21,8 +26,8 @@
 
 </head>
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent d-flex justify-content-between">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent d-flex justify-content-between fixed-top">
             <div class="container  d-flex align-items-center  ">
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="images/logo.png" alt="" class="img-fluid me-2">
@@ -34,13 +39,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#intro">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
+                            <a class="nav-link" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Portfolio</a>
@@ -117,17 +122,508 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="main">
+        <!-- START OF intro section -->
+        <section id="intro" class="intro d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Content -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <div class="intro-label d-flex flex-column justify-content-center">
+                            <h1>We offer modern solutions for growing your business</h1>
+                            <p>We are team of talented designers making websites with Bootstrap</p>
+                            <div class="d-flex">
+                                <a id="StartBtn" href="" class="btn btn-primary d-flex align-items-center justify-content-center">
+                                    <span>Get Started</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                                <a id="WatchBtn" href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class=" d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-play-circle"></i>
+                                    <span>Watch Video</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Picture -->
+                    <div class="col-lg-6  d-flex align-items-center justify-content-center">
+                        <img src="images/hero-img.png" class="img-fluid animated">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF intro section -->
+        
+        <!-- START OF about section -->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <!-- Content -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <div class="content">
+                            <h5>Who We Are</h5>
+                            <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
+                            <p>
+                                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                            </p>
+                            <a id="Readmore" href="" class="btn btn-primary d-inline-flex align-items-center justify-content-center">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Picture -->
+                    <div class="col-lg-6">
+                        <img src="images/about.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF about section -->
+        
+        <!-- START OF Values section -->
+        <section class="values">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Our Values</h5>
+                            <h2>What we value most</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="images/values-1.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Ad cupiditate sed est odio</h5>
+                                <p class="card-text">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="images/values-2.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Voluptatem voluptatum alias</h5>
+                                <p class="card-text">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="images/values-3.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Fugit cupiditate alias nobis.</h5>
+                                <p class="card-text">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF Values section -->
+        
+        <!-- START OF Statistics section -->
+        <section class="stat">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card_body">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 class="num" data-val="232">000</h6>
+                                        <span>Happy Clients</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card_body">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 class="num" data-val="521">000</h6>
+                                        <span>Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card_body">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i> 
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 class="num" data-val="1463">0000</h6>
+                                        <span>Hours Of Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card_body">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6 class="num" data-val="15">00</h6>
+                                        <span>Hard Workers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF Statistics section -->
+        
+        <!-- START OF Features section -->
+        <section class="features">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Features</h5>
+                            <h2>Our Advacedd Features</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/features.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-check"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h6>Facilis neque ipsa</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+        <!-- END OF Features section -->
+        
+        <!-- START OF More Features section -->
+        <section class="moreFeatures">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 d-flex align-items-center justify-content-center">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div>
+                                                <i class="bi bi-award"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Corporis voluptates sit</h6>
+                                                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div>
+                                                <i class="bi bi-card-checklist"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Ullamco laboris nisi</h6>
+                                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div>
+                                                <i class="bi bi-dribbble"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Labore consequatur</h6>
+                                                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div >
+                                                <i class="bi bi-filter-circle"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Beatae veritatis</h6>
+                                                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div>
+                                                <i class="bi bi-lightning-charge"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Molestiae dolor</h6>
+                                                <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card_body">
+                                        <div class="d-flex">
+                                            <div>
+                                                <i class="bi bi-patch-check"></i>
+                                            </div>
+                                            <div>
+                                                <h6>Explicabo consectetur</h6>
+                                                <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="images/alt-features.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF More Features section -->
+        
+        <!-- START OF Services section -->
+        <section id="services" class="services">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Services</h5>
+                            <h2>Check Our Services</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col-lg-4">
+                        <div class="blue card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-activity icon"></i>
+                            <h5 class="card-title">Nesciunt Mete</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="orange card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-broadcast icon"></i>                            
+                            <h5 class="card-title">Eosle Commodi</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="green card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-easel icon"></i>
+                            <h5 class="card-title">Ledo Markt</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="red card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-bounding-box-circles icon"></i>
+                            <h5 class="card-title">Asperiores Commodi</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="purple card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-calendar4-week icon"></i>
+                            <h5 class="card-title">Nesciunt Mete</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pink card d-flex align-items-center justify-content-center">
+                            <i class="bi bi-chat-square-text icon"></i>
+                            <h5 class="card-title">Dolori Architecto</h5>
+                            <p class="text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+
+                            <a id="ReadServices" href="#">
+                                <span>Read More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF Services section -->
+        
+        <!-- START OF intro section -->
         <section></section>
+        <!-- END OF intro section -->
+        
+        <!-- START OF intro section -->
         <section></section>
+        <!-- END OF intro section -->
+        
+        <!-- START OF intro section -->
         <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <!-- END OF intro section -->
+        
     </main>
     <footer></footer>
     <!-- Bootstrap JS -->

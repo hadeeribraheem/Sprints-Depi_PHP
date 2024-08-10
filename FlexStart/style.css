@@ -2,23 +2,50 @@
 :root {
     --main_color: #012970;
     --navbar_active:#4154f1;
-
+    --bg-color:#f5f6fe;
+    --roboto-font: "Roboto",sans-serif;
+    --nunito-font: "Nunito",sans-serif;
 }
-
 /* END OF colors & font */
 
-
 /********** START OF Public styles ************/
-body{
-    font-family: 'Nunito', sans-serif;
+*{
+    font-family: var(--nunito-font);
+    scroll-behavior: smooth;
+    scroll-margin-top: 98px
+}
+section{
+    color: #444444;
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+/** For Section titles **/
+.section-title{
+    padding-bottom: 60px
+}
+.section-title h5{
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    color: var(--navbar_active);
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--roboto-font);
+    letter-spacing: 1px;
+    border-radius: 70px;
+}
+.section-title h2{
+    color: var(--main_color);
+    margin: 12px 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--nunito-font);
 }
 /********** END OF Public styles ************/
 
 /*=============== START OF heading ================*/
 /*-- Nav Bar --*/
-header{
-    padding: 20px 0;
-}
 nav .navbar-brand h1{
     font-size: 30px;
     margin: 0;
@@ -75,37 +102,363 @@ nav .btn:hover{
     display: flex;
     right: 30%;
 }
+/*=============== END OF heading ================*/
 
-/* .dropdown .listingDropdown {
+
+/*=============== START OF intro section ================*/
+.intro{
+    background-image: url(images/hero-bg.png);
+    min-height: 100vh;
+    padding: 80px 0 60px 0;
+    background-size: cover;
+}
+.intro-label h1{
+    font-weight: 700;
+    color: var(--main_color);
+    font-size: 48px;
+    line-height: 54px;
     margin: 0;
-    padding: 10px;
-    background: #ffff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 130%;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
+}
+.intro-label p{
+    color: #797a7c;
+    margin: 5px 0 30px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+#StartBtn{
+    padding: 11px 40px;
+    background-color: #4154f1;;
+}
+#StartBtn:hover{
+    opacity: 0.8;
+}
+#StartBtn:hover i{
+    opacity: 0.8;
+    transform: translateX(7px);
+    transition: transform 0.3s ease; 
+}
+#StartBtn i{
+    margin-left: 5px;
+    font-size: 18px;
+}
+#WatchBtn{
+    transition: 0.5s;
+    margin-left: 25px;
+    text-decoration: none;
+}
+#WatchBtn span{
+    font-size: 16px;
+    color: #444444;
+    font-weight: 700;
+    font-family: var(--roboto-font);
+}
+#WatchBtn i{
+    color: #4154f1;
+    font-size: 32px;
     transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
+    line-height: 0;
+    margin-right: 8px;
+}
+#WatchBtn i,
+#WatchBtn:hover span{
+    color: #3e9bc6;
+}
+.intro .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    width: 80%;
+}
+@keyframes up-down{
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+/*=============== END OF intro section ================*/
+
+
+/*=============== START OF About Section ================*/
+#about .content{
+    background-color: var(--bg-color);
+    padding: 40px;
+}
+#about .content h5{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navbar_active);
+    text-transform: uppercase;
+}
+#about .content h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main_color);
+}
+#about .content p{
+    margin-bottom: 2rem !important;
+}
+#Readmore{
+    padding: 11px 40px;
+    background-color: #4154f1;
+    font-weight: 700;
+    line-height: 1;
+    transition: 0.5s;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+#Readmore:hover{
+    opacity: 0.8;
+}
+#Readmore:hover i{
+    opacity: 0.8;
+    transform: translateX(7px);
+    transition: transform 0.3s ease; 
+}
+#Readmore i{
+    margin-left: 5px;
+    font-size: 18px;
+}
+#about img{
+    margin-left: -25px;
+}
+/*=============== END OF About Section ================*/
+
+/*=============== START OF values Section ================*/
+.values .card:hover {
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+.values .card{
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+    padding: 38px;
+}
+.values .card img {
+    padding: 20px 30px;
+    transition: transform 0.3s ease-in-out;
+}
+.values .card-title{
+    color: var(--main_color);
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.values .card-text{
+    color: #444444;
+}
+.card:hover img{
+    transform: scale(0.90);
+}
+/*=============== END OF values Section ==================*/
+
+/*=============== START OF stat Section ================*/
+.stat .card{
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    border: 0;
+    padding: 30px;
+}
+.stat .card i{
+    color: var(--navbar_active);
+    font-size: 46px;
+}
+.stat .card h6{
+    color: var(--main_color);
+    font-size: 35px;
+    font-weight: 700;
+    font-family: var(--roboto-font);
+}
+/*=============== END OF stat Section ==================*/
+
+/*=============== START OF Features Section ================*/
+.features .card{
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    border: 0;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+}
+.features .card i{
+    background: var(--bg-color);
+    color: var(--main_color);
+    line-height: 0;
+    padding: 4px;
+    margin-right: 10px;
+    font-size: 24px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.features .card h6{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #012970;
+}
+
+.features .card:hover i{
+    background-color: var(--navbar_active);
+    color: #ffffff;
+}
+/*=============== END OF Features Section ==================*/
+
+/*=============== START OF More Features Section ================*/
+.moreFeatures .card{
+    border: 0;
+    margin-top: 25px
+}
+.moreFeatures .card i{
+    color: var(--navbar_active);
+    font-size: 40px;
+    line-height: 1px;
+    margin-right: 13px;
+}
+.moreFeatures .card h6{
+    font-size: 18px;
+    font-weight: 700;
+    color: #012970;
+}
+.moreFeatures .card p{
+    color: #838383;
+}
+/*=============== END OF More Features Section ==================*/
+
+/*=============== START OF services Section ================*/
+/* .services .card:hover {
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 } */
-/*=============== END OF heading ================*/
+.services .card{
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    border: 0;
+    padding: 38px;
+    height: 400px;
+}
+
+.services .card .icon {
+    font-size: 36px;
+    padding: 20px 20px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 25px;
+    display: inline-block;
+    line-height: 0;
+    transition: 0.3s;
+}
+.services .card-title{
+    color: var(--main_color);
+    font-weight: 700;
+    font-size: 22px;
+}
+.services a{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+#ReadServices {
+    font-weight: 700;
+}
+/*----- Card hover Effect -----*/
+.services .card:hover h5,
+.services .card:hover p,
+.services .card:hover #ReadServices {
+    color: #fff;
+}
+.services .card:hover .icon {
+    background-color: #fff;
+}
+/**************************************/
+/* 1st item : blue */
+.services .blue{
+    border-bottom: 3px solid #0dcaf0;
+}
+.services .blue .icon{
+    background-color: #e6fafd;
+}
+.services .blue a,.services .blue .icon{
+    color:  #0dcaf0;
+}
+.services .blue:hover {
+    background-color: #0dcaf0;
+}
+/**************************************/
+/* 2nd item : orange */
+.services .orange{
+    border-bottom: 3px solid #fd7e14;
+}
+.services .orange .icon{
+    background-color: #fff2e7;
+}
+.services .orange a,.services .orange .icon{
+    color:  #fd7e14;
+}
+.services .orange:hover {
+    background-color: #fd7e14;
+}
+/**************************************/
+/* 3rd item : green */
+.services .green{
+    border-bottom: 3px solid #20c997;
+}
+.services .green .icon{
+    background-color: #e8f9f4;
+}
+.services .green a,.services .green .icon{
+    color:  #20c997;
+}
+.services .green:hover {
+    background-color: #20c997;
+}
+/**************************************/
+/* 4th item : red */
+.services .red{
+    border-bottom: 3px solid #df1529;
+}
+.services .red .icon{
+    background-color: #fce7e5;
+}
+.services .red a,.services .red .icon{
+    color:  #df1529;
+}
+.services .red:hover {
+    background-color: #df1529;
+}
+/**************************************/
+/* 5th item : purple */
+.services .purple{
+    border-bottom: 3px solid #6610f2;
+}
+.services .purple .icon{
+    background-color: #efe7fe;
+}
+.services .purple a,.services .purple .icon{
+    color:  #6610f2;
+}
+.services .purple:hover {
+    background-color: #6610f2;
+}
+/**************************************/
+/* 6th item : pink */
+.services .pink{
+    border-bottom: 3px solid #f3268c;
+}
+.services .pink .icon{
+    background-color: #fee9f3;
+}
+.services .pink a,.services .pink .icon{
+    color:  #f3268c;
+}
+.services .pink:hover {
+    background-color: #f3268c;
+}
+/**************************************/
 
 
-/*=============== START OF heading ================*/
 
-/*=============== END OF heading ================*/
+/*=============== END OF services Section ==================*/
 
+/*=============== START OF values Section ================*/
+/*=============== END OF values Section ==================*/
 
-
-/*=============== START OF heading ================*/
-
-/*=============== END OF heading ================*/
-
-
+/*=============== START OF values Section ================*/
+/*=============== END OF values Section ==================*/
 /********** Media Query *********/
 @media (max-width: 768px) {
     .navbar .btn-primary {
