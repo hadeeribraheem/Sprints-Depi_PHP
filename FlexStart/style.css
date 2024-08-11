@@ -955,6 +955,9 @@ nav .btn:hover{
 /* =================================================================*/
 /********** Media Query *********/
 @media (max-width: 768px) {
+    .filterBtns a{
+        padding: 5px;
+    }
     .navbar .btn-primary {
         order: 2;
         margin: 0 15px 0 0;
