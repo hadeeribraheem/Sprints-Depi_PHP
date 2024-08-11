@@ -1,0 +1,94 @@
+:root{
+    --main_color: #012970;
+    --navbar_active:#4154f1;
+    --bg-color:#f5f6fe;
+    --main-bg-color:#000000;
+    --main-font-color:#ffffff;
+    --roboto-font: "Roboto",sans-serif;
+    --nunito-font: "Nunito",sans-serif;
+}
+body{
+    background-color: var(--main-bg-color);
+    color:var(--main-font-color);
+}
+section {
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
+    padding: 60px 0;
+}
+.section-title h2 {
+    color: var(--main-font-color);
+    margin: 12px 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--nunito-font);
+}
+.card p{
+    color: var(--main-bg-color);
+}
+.card span{
+    color: #000000;
+}
+.clients  .swiper-slide{
+    padding: 20px;
+    background-color: #ffffff;
+}
+/* footer */
+#footer{
+    font-size: 14px;
+}
+.moreFeatures .card{
+    padding: 20px;
+}
+#footer .newsletter {
+    background-color: #f9fafe;
+    border-top: 1px solid #e0e4fc;
+    border-bottom: 1px solid #e4e7fc;
+    padding: 50px 0;
+}
+#footer h5{
+    color: var(--main_color);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+.newsletter h5 {
+    font-size: 24px;
+}
+.Footerlinks h5{
+    font-size: 16px;
+}
+#footer p{
+    font-size: 14px;
+    color: #e0e4fc;
+}
+.footerForm {
+    background-color: white;
+    border: 1px solid #eaebee;
+    box-shadow: 0px 2px 25px rgba(240, 237, 237, 0.1);
+}
+.footerForm input[type=email] {
+    border: 0;
+    padding: 4px;
+    width: 100%;
+    color: var(--main-bg-color);
+}
+
+.aboutSummery a {
+    color: var(--bg-color);
+}
+
+.Footerlinks ul a {
+    color: var(--bg-color);
+}
+#footer h5 {
+    color: var(--bg-color);
+
+}
+#footer .newsletter {
+    background-color: #2b2b2c;
+    border-top: 1px solid #e0e4fc;
+    border-bottom: 1px solid #e4e7fc;
+}
+
+

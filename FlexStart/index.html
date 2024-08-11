@@ -21,8 +21,13 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- CSS file -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+
 
 </head>
 <body>
@@ -122,6 +127,12 @@
             </div>
         </nav>
     </header>
+    <aside >
+        <button id="theme">
+            <i class="bi bi-brightness-high-fill" name="style"></i>
+            <i class="bi bi-moon-fill" name ="darkmode"></i>
+        </button>
+    </aside>
     <main id="main">
         <!-- START OF intro section -->
         <section id="intro" class="intro d-flex align-items-center justify-content-center">
@@ -184,7 +195,7 @@
         <section class="values">
             <!-- Start of section title -->
             <div class="container">
-                <div class="row">
+                <div class="row ">
                     <div class="col-12">
                         <div class="section-title d-flex flex-column align-items-center justify-content-center">
                             <h5>Our Values</h5>
@@ -195,7 +206,7 @@
             </div>
             <!-- End of section title -->
             <div class="container">
-                <div class="row">
+                <div class="row gy-4">
                     <div class="col-lg-4">
                         <div class="card">
                             <img src="images/values-1.png" class="card-img-top img-fluid" alt="...">
@@ -231,7 +242,7 @@
         <!-- START OF Statistics section -->
         <section class="stat">
             <div class="container">
-                <div class="row">
+                <div class="row gy-4">
                     <div class="col-lg-3">
                         <div class="card">
                             <div class="card_body">
@@ -612,20 +623,763 @@
         </section>
         <!-- END OF Services section -->
         
-        <!-- START OF intro section -->
-        <section></section>
-        <!-- END OF intro section -->
+        <!-- START OF Pricing section -->
+        <section class="pricing">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Pricing</h5>
+                            <h2>Check Our Affordable Pricing</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+            <div class="container">
+                    <div class="row gy-4">
+                        <!-- 1st price item -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card d-flex align-items-center justify-content-center">
+                                <h5 class="card-title" style="color: #20c997;" >Free Plan</h5>
+                                <div class="price  d-flex align-items-center justify-content-center">
+                                    <div class="price">
+                                        <sup class="dollar-sign">$</sup>
+                                        0
+                                        <span> / mo</span>
+                                    </div>
+                                </div>
+                                <div class="icon  d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-box" style="color: #20c997;"></i>
+                                </div>
+                                <ul>
+                                    <li>Aida dere</li>
+                                    <li>Nec feugiat nisl</li>
+                                    <li>Nulla at volutpat dola</li>
+                                    <li class="na">Pharetra massa</li>
+                                    <li class="na">Massa ultricies mi</li>
+                                </ul>
+                                <a href="#" class="buyBtn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- 2nd price item -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card d-flex align-items-center justify-content-center">
+                                <span id="featured"></span>
+                                <h5 class="card-title" style="color: #0dcaf0;">Starter Plan</h5>
+                                <div class="price">
+                                    <sup class="dollar-sign">$</sup>
+                                    19
+                                    <span> / mo</span>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-send" style="color: #0dcaf0;"></i>
+                                </div>
+                                <ul>
+                                    <li>Aida dere</li>
+                                    <li>Nec feugiat nisl</li>
+                                    <li>Nulla at volutpat dola</li>
+                                    <li>Pharetra massa</li>
+                                    <li class="na">Massa ultricies mi</li>
+                                </ul>
+                                <a href="#" class="buyBtn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- 3rd price item -->
+                        <div class="col-lg-3 col-md-6">
+                            <div  class="card d-flex align-items-center justify-content-center">
+                                <h5 class="card-title" style="color: #fd7e14;">Business Plan</h5>
+                                <div class="price">
+                                    <sup class="dollar-sign">$</sup>
+                                        29
+                                    <span> / mo</span>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-airplane" style="color: #fd7e14;"></i>
+                                </div>
+                                <ul>
+                                    <li>Aida dere</li>
+                                    <li>Nec feugiat nisl</li>
+                                    <li>Nulla at volutpat dola</li>
+                                    <li>Pharetra massa</li>
+                                    <li>Massa ultricies mi</li>
+                                </ul>
+                                <a href="#" class="buyBtn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- 4th price item -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card d-flex align-items-center justify-content-center">
+                                <h5 class="card-title" style="color: #0d6efd;">Ultimate Plan</h5>
+                                <div class="price">
+                                    <sup class="dollar-sign">$</sup>
+                                        49
+                                    <span> / mo</span>
+                                </div>
+                                <div class="icon">
+                                <i class="bi bi-rocket" style="color: #0d6efd;"></i>
+                                </div>
+                                <ul>
+                                    <li>Aida dere</li>
+                                    <li>Nec feugiat nisl</li>
+                                    <li>Nulla at volutpat dola</li>
+                                    <li>Pharetra massa</li>
+                                    <li>Massa ultricies mi</li>
+                                </ul>
+                                <a href="#" class="buyBtn">Buy Now</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF Pricing section -->
         
-        <!-- START OF intro section -->
-        <section></section>
-        <!-- END OF intro section -->
+        <!-- START OF F.A.Q section -->
+        <section class="FAQ">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>F.A.Q</h5>
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Non consectetur a erat nam at lectus urna duis?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                        Dolor sit amet consectetur adipiscing elit pellentesque?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="accordion" id="accordionExample2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        Non consectetur a erat nam at lectus urna duis?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse " aria-labelledby="headingFive" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        Dolor sit amet consectetur adipiscing elit pellentesque?
+                                        <i class="faq-toggle bi bi-chevron-right ms-auto"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF F.A.Q section -->
         
-        <!-- START OF intro section -->
-        <section></section>
-        <!-- END OF intro section -->
+        <!-- START OF Portfolio section -->
+        <section>
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Portfolio</h5>
+                            <h2>Check our latest work</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of section title -->
+            <!--filter btns--> 
+            <div class="container">
+                <div class="filterBtns d-flex justify-content-center">
+                    <a href="#" data-name="All" class="active">All</a>
+                    <a href="#" data-name="App">App</a>
+                    <a href="#" data-name="Product">Product</a>
+                    <a href="#" data-name="Branding">Branding</a>
+                    <a href="#" data-name="Books">Books</a>
+                </div>
+                <div class="filterable_cards d-flex ">
+                    <div class="row gy-4">
+                        <div class="col-lg-4" data-name="App">
+                            <div class="portfolio-item" >
+                                <img src="images/app-1.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>App 1</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" data-name="Product">
+                            <div class="portfolio-item" >    
+                                <img src="images/product-1.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Product 1</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"  data-name="Branding">
+                            <div class="portfolio-item" >
+                                <img src="images/branding-1.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Branding 1</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"  data-name="Books">
+                            <div class="portfolio-item">
+                                <img src="images/books-1.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Books 1</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" data-name="App">
+                            <div class="portfolio-item" >
+                                <img src="images/app-2.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>App 2</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4"  data-name="Product">
+                            <div class="portfolio-item" >
+                                <img src="images/product-2.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Producr 2</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class=" col-lg-4" data-name="Branding">
+                            <div class="portfolio-item" >
+                                <img src="images/branding-2.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Branding 2</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4" data-name="Books">
+                            <div class="portfolio-item" >
+                                <img src="images/books-2.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Books 2</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4" data-name="App">
+                            <div class="portfolio-item" >
+                                <img src="images/app-3.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>App 3</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4" data-name="Product">
+                            <div class="portfolio-item" >
+                                <img src="images/product-3.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Product 3</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4" data-name="Branding">
+                            <div class="portfolio-item" >
+                                <img src="images/branding-3.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Branding 3</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-4" data-name="Books">
+                            <div class="portfolio-item" >
+                                <img src="images/books-3.jpg" alt="" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <h4>Books 3</h4>
+                                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                                    <a href="images/app-1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- END OF Portfolio section -->
         
+        <!-- START OF Testimonials section -->
+        <section class="testimonials">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Testimonials</h5>
+                            <h2>What they are saying about us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Carousel-->
+            <div class="container">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper"> 
+                        <div class="swiper-slide ">
+                                <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text text-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-1.jpg" class="testimonial-img" alt="" class="img-fluid">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text tex-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-2.jpg" class="testimonial-img" alt="">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text tex-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-3.jpg" class="testimonial-img" alt="" class="img-fluid">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text tex-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-3.jpg" class="testimonial-img" alt="">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text tex-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-4.jpg" class="testimonial-img" alt="">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <div class="swiper-slide" >
+                            <div class="card">
+                                <!-- Testimonial Item -->
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text tex-center">
+                                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                        </p>
+                                        <div class="profile mt-auto">
+                                            <img src="images/testimonials-5.jpg" class="testimonial-img" alt="">
+                                            <h3>Jena Karlis</h3>
+                                            <h4>Store Owner</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                    
+            </div>
+        </section>
+        <!-- END OF Testimonials section -->
+
+        <!-- START OF Team section -->
+        <section></section>
+        <!-- END OF Team section -->
+
+        <!-- START OF Clients section -->
+        <section id="clients" class="clients section light-background">
+            <!-- Start of section title -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title d-flex flex-column align-items-center justify-content-center">
+                            <h5>Clients</h5>
+                            <h2>We work with best clients</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="swiper clients-swiper">
+                    <div class="swiper-wrapper align-items-center"> 
+                        <div class="swiper-slide" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-5.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-prev" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-6.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active"  style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-7.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" style="width: 110px; margin-right: 120px;">
+                            <img src="images/client-8.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide" role="group" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide" role="group" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-2.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide" role="group" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-3.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide" role="group" style="width: 116px; margin-right: 120px;">
+                            <img src="images/client-4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- END OF Clients section -->
+
+        <!-- START OF Recent Posts section -->
+        <section></section>
+        <!-- END OF Recent Posts section -->
+
+        <!-- START OF Contact section -->
+        <section></section>
+        <!-- END OF Contact section -->
+
+        <!-- START OF Join Our Newsletter section -->
+        <section></section>
+        <!-- END OF Join Our Newsletter section -->
+
+
     </main>
-    <footer></footer>
+    <footer id="footer">
+        <div class="newsletter">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <h5>Join Our Newsletter</h5>
+                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                        <form action="" method="post" class="mail-form">
+                            <div class="footerForm">
+                                <input type="email" name="email">
+                                <input type="submit" value="Subscribe">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footerBottom">
+            <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 aboutSummery">
+                <a href="#" class="d-flex align-items-center">
+                    FlexStart
+                </a>
+                <div class="contact pt-3">
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022</p>
+                <p class="mt-3"><span class="fw-bold">Phone:</span> <span>+1 5589 55488 55</span></p>
+                <p><span class="fw-bold">Email:</span> <span>info@example.com</span></p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 Footerlinks">
+                <h5>Useful Links</h5>
+                <ul>
+                    <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 Footerlinks">
+                <h5>Our Services</h5>
+                <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <h5 style="font-size: 16px; font-weight: bold; position: relative; padding-bottom: 12px;">Follow Us</h5>
+                <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                <div class="socialmedia d-flex">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="container copyRight text-center mt-4">
+            <p> &copy Copyright <span class="px-1 fw-bold">FlexStart</span>
+                <span>All Rights Reserved</span></p>
+            <p>Designed by <a href="#">BootstrapMade</a></p>
+            
+
+        </div>
+
+        </footer>
+        <a  id="back-to-top" href="#" class="d-flex align-items-center justify-content-center active">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto', // Automatically adjusts the number of slides shown based on container width
+        spaceBetween: 20, // Space between slides
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: true,
+        },
+        loop: true,
+        speed: 600,
+        autoplay: {
+            delay: 5000, // Time between slide changes, in milliseconds
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+        var swiper2 = new Swiper('.clients-swiper', {
+                loop: true,
+                speed: 600,
+                autoplay: {
+                    delay: 5000, // Time between slide changes, in milliseconds
+                },
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                },
+                slidesPerView: 'auto',
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 60
+                    },
+                    640: {
+                        slidesPerView: 4,
+                        spaceBetween: 80
+                    },
+                    992: {
+                        slidesPerView: 5,
+                        spaceBetween: 120
+                    },
+                    1200: {
+                        slidesPerView: 6,
+                        spaceBetween: 120
+                    }
+                }
+            });
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     

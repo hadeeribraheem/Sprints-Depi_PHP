@@ -3,9 +3,12 @@
     --main_color: #012970;
     --navbar_active:#4154f1;
     --bg-color:#f5f6fe;
+    --main-bg-color:#fff;
+    --main-font-color:#444444;
     --roboto-font: "Roboto",sans-serif;
     --nunito-font: "Nunito",sans-serif;
 }
+
 /* END OF colors & font */
 
 /********** START OF Public styles ************/
@@ -13,6 +16,10 @@
     font-family: var(--nunito-font);
     scroll-behavior: smooth;
     scroll-margin-top: 98px
+}
+body{
+    background-color: var(--main-bg-color);
+    color:var(--main-font-color);
 }
 section{
     color: #444444;
@@ -44,6 +51,35 @@ section{
 }
 /********** END OF Public styles ************/
 
+/*== Theme switch == */
+#theme{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: 50%;
+    z-index: 9999999;
+    border: 0;
+}
+#theme i{
+    color: var(--main_color);
+    font-size: 26px;
+}
+#theme i:last-child{
+    display: none;
+}
+#theme i.hide{
+    display: none;
+}
+#theme i.active{
+    display: block;
+}
 /*=============== START OF heading ================*/
 /*-- Nav Bar --*/
 nav .navbar-brand h1{
@@ -321,14 +357,13 @@ nav .btn:hover{
 /*=============== END OF More Features Section ==================*/
 
 /*=============== START OF services Section ================*/
-/* .services .card:hover {
-    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-} */
+
 .services .card{
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
     border: 0;
     padding: 38px;
     height: 400px;
+    transition: 0.3s;
 }
 
 .services .card .icon {
@@ -449,16 +484,475 @@ nav .btn:hover{
     background-color: #f3268c;
 }
 /**************************************/
-
-
-
 /*=============== END OF services Section ==================*/
 
-/*=============== START OF values Section ================*/
-/*=============== END OF values Section ==================*/
+/*=============== START OF pricing Section ================*/
+.pricing ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    height: 100%;
+    color: #444444;   
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.pricing .card{
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    border: 0;
+    padding: 38px;
+    height:100%;
+    transition: 0.3s;
+}
+.pricing #featured {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.pricing #featured::before{
+    content: 'Featured';
+    position: absolute;
+    width: 150% !important;
+    height: 40px;
+    transform: rotate(45deg) translateY(-20px);
+    width: 100px;
+    background: var(--navbar_active);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
-/*=============== START OF values Section ================*/
-/*=============== END OF values Section ==================*/
+.pricing .card-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.pricing .price {
+    font-size: 36px;
+    color: var(--main_color);
+    font-weight: 600;
+}
+.pricing .price span {
+    color:#444444;
+    font-size: 16px;
+    font-weight: 300;
+}
+.pricing .icon {
+    padding: 20px 0;
+}
+.pricing .icon i {
+    font-size: 48px;
+}
+.pricing a{
+    text-decoration: none;
+}
+.pricing ul .na {
+    color:#bebebe;
+    text-decoration: line-through;
+}
+.buyBtn {
+    font-weight: 700;
+    display: inline-block;
+    padding: 8px 40px 10px 40px;
+    border-radius: 50px;
+    color: var(--navbar_active);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--nunito-font);
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid var(--navbar_active);
+}
+
+.pricing .buyBtn:hover {
+    background: var(--navbar_active);
+    color: white;
+}
+
+.pricing .card:hover {
+    transform: scale(1.1);
+
+}
+/*=============== END OF pricing Section ==================*/
+
+/*=============== START OF FAQ Section ================*/
+.accordion-item {
+    border: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
+}
+.accordion-button,.accordion-button{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main_color) !important;
+    position: relative;
+}
+.accordion-button:not(.collapsed) {
+    background-color: white !important;
+    color: var(--navbar_active) !important;
+}
+.accordion-button.collapsed{
+    color: var(--main_color) !important;
+
+}
+.accordion-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) .faq-toggle {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+}
+.accordion-button.collapsed .faq-toggle {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+.accordion-button::after {
+    display: none;
+}
+.accordion-button:hover{
+    color: var(--navbar_active) !important;
+}
+/*=============== END OF FAQ Section ==================*/
+
+/*=============== START OF Portfolio Section ==================*/
+.filterBtns {
+    margin-bottom: 18px;
+}
+.filterBtns a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: #46494e;
+    font-family: var(--roboto-font);
+    transition: all 0.3s ease-in-out;
+}
+.filterable_cards .portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+.filterable_cards .portfolio-item:hover img {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.filterable_cards .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.filterable_cards .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+.filterable_cards .portfolio-item .portfolio-info h4 {
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--navbar_active);
+}
+.filterable_cards .portfolio-item .portfolio-info p {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.filterable_cards .portfolio-item .portfolio-info .preview-link, .filterable_cards .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    left: calc(50% - 40px);
+    font-size: 26px;
+    top: calc(50% - 14px);
+    color: #fff;
+    transition: 0.3s;
+    line-height: 1.2;
+}
+.filterable_cards .portfolio-item .portfolio-info .details-link {
+    left: 50%;
+    font-size: 34px;
+    line-height: 0;
+}
+.filterBtns .active{
+    color: var(--navbar_active);
+}
+.hide{
+    display: none;
+}
+.filterBtns a:hover{
+    color: var(--navbar_active);
+}
+/*=============== END OF Portfolio Section ==================*/
+
+/* ================ Testimonials Section =================*/
+.testimonial-item{
+    width: 500px;
+}
+.testimonials .card {
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+    box-sizing: content-box;
+    padding: 30px;
+    margin: 40px 30px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    border: 0 !important;
+}
+.testimonials .testimonial-item .stars {
+    margin-bottom: 15px;
+}
+
+/* ================ START OF Testimonials Section =================*/
+.stars>i{
+    color: #ffc107;
+}
+.profile img{
+    border-radius: 50%;
+    width: 90px;
+}
+.profile h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: var(--main_color);
+}
+.profile h4{
+    font-size: 14px;
+    color: #afafaf;
+    margin: 0;
+}
+.swiper {
+    width: 100%;
+    padding-top: 50px !important;
+    padding-bottom: 70px !important; /* Increase this value to provide more space for pagination */
+}
+.testimonials .card{
+    margin: 0 0 !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2) !important;
+
+}
+.testimonials .swiper-slide {
+    width: auto; /* Let Swiper calculate the width automatically */
+    max-width: 300px; /* Optional: set a max-width for consistency */
+    height: auto; /* Adjust based on content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the blur effect */
+}
+.testimonials .swiper-slide-active {
+    transform: scale(1.1); /* Slightly enlarge the active slide */
+    transition: transform 0.3s ease-in-out;
+}
+.testimonials  .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(3px); /* Apply blur to non-active slides */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the blur effect */
+}
+
+/* ================ END OF Testimonials Section =================*/
+
+/***************/
+/* clients */
+.clients  .swiper-slide{
+    opacity: 0.5; /* Apply blur */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for the blur effect */
+}
+.clients  .swiper-slide:hover{
+    opacity: 1; /* Apply blur */
+}
+/***************/
+/*========================= START OF Footer =============================*/
+#footer{
+    font-size: 14px;
+}
+#footer .newsletter {
+    background-color: #f9fafe;
+    border-top: 1px solid #e0e4fc;
+    border-bottom: 1px solid #e4e7fc;
+    padding: 50px 0;
+}
+#footer h5{
+    color: var(--main_color);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+.newsletter h5 {
+    font-size: 24px;
+}
+.Footerlinks h5{
+    font-size: 16px;
+}
+#footer p{
+    font-size: 14px;
+    color: #444444;
+}
+.footerForm {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 6px 8px;
+    position: relative;
+    background-color: white;
+    border: 1px solid #eaebee;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.footerForm input[type=email] {
+    border: 0;
+    padding: 4px;
+    width: 100%;
+    color: #444444;
+}
+.footerForm input[type=submit] {
+    border: 0;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: -7px -8px -7px 0;
+    background: var(--navbar_active);
+    color:white;
+    transition: 0.3s;
+    border-radius: 0 4px 4px 0;
+}
+.footerBottom{
+    padding-top: 50px;
+}
+.aboutSummery a {
+    color: var(--main_color);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--nunito-font);
+    text-decoration: none;
+}
+.contact p {
+    margin-bottom: 5px;
+}
+.Footerlinks ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.Footerlinks ul li:first-child {
+    padding-top: 0;
+}
+.Footerlinks ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.Footerlinks ul i {
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 0;
+    color: var(--navbar_active);
+}
+.Footerlinks ul a {
+    display: inline-block;
+    color: #827f7c;
+    line-height: 1;
+    text-decoration: none;
+}
+.Footerlinks ul a:hover {
+    color: var(--navbar_active);
+}
+.socialmedia a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color:#f9fafe;
+    border: 1px solid #e4e7fc;
+    font-size: 16px;
+    color: var(--navbar_active);
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.socialmedia a:hover{
+    color: white;
+    background-color: var(--navbar_active);
+}
+.copyRight {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #e4e7fc;
+}
+.copyRight p {
+    margin-bottom: 0;
+}
+.copyRight a{
+    text-decoration: none;
+    color: var(--navbar_active);
+    font-weight: 500;
+    transition: 0.3s;
+}
+.copyRight a:hover{
+    opacity: 0.8;
+}
+/*========================= END OF Footer =============================*/
+
+                            /*-- Bach to Top BTN --*/
+/* =================================================================*/
+#back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #4154f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+#back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+#back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+/* =================================================================*/
 /********** Media Query *********/
 @media (max-width: 768px) {
     .navbar .btn-primary {

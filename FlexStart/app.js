@@ -59,3 +59,66 @@ valueDisplays.forEach((valueDisplay)=>{
     },duration);
 })
 /*============== end Of statistics section =====================*/
+
+
+/*============== start of portfolio section =======================*/
+                    /** Filter Gallery **/
+let filter_btns = document.querySelectorAll('.filterBtns a');
+let filtered_cards = document.querySelectorAll('.filterable_cards .col-lg-4');
+
+for(let btn of filter_btns) {
+    btn.addEventListener('click',function(e) {
+        e.preventDefault();
+        document.querySelector('.filterBtns .active').classList.remove('active');
+        e.target.classList.add('active');
+        
+        //iterate over cards
+        filtered_cards.forEach(card=>{          
+            // hide all cards
+            card.classList.add('hide');
+            //check if the card matches the selected filter or 'all' is selected
+            if(card.dataset.name === e.target.dataset.name || e.target.dataset.name === "All") {
+                card.classList.remove('hide');
+            }
+        });
+    });
+}
+/*============== end Of portfolio section =====================*/
+
+/*============== Back to Top Btn ==============================*/
+document.addEventListener('scroll', function () {
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (window.scrollY > 100) {
+        backToTopBtn.classList.add('active');
+    } else {
+        backToTopBtn.classList.remove('active');
+    }
+});
+
+document.getElementById('back-to-top').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+/****************************** */
+let themeBtns= document.querySelectorAll('#theme i');
+for(let themeBtn of themeBtns){
+    themeBtn.onclick = function(){
+        let theme = event.target.getAttribute('name');
+        document.querySelector('head link:last-of-type').setAttribute('href', theme + '.css');
+        console.log(document.querySelector('head link:last-of-type'))
+        // Toggle the visibility of the icons
+        for (let btn of themeBtns) {
+            if (btn === event.target) {
+                btn.classList.add('hide');
+                btn.classList.remove('active');
+            } else {
+                btn.classList.remove('hide');
+                btn.classList.add('active')
+            }
+        }
+        
+    }
+}
