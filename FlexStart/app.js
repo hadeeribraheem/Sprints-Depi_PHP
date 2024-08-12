@@ -103,13 +103,35 @@ document.getElementById('back-to-top').addEventListener('click', function (e) {
     });
 });
 /****************************** */
-let themeBtns= document.querySelectorAll('#theme i');
-for(let themeBtn of themeBtns){
-    themeBtn.onclick = function(){
+// let themeBtns= document.querySelectorAll('#theme i');
+// for(let themeBtn of themeBtns){
+//     themeBtn.onclick = function(){
+//         let theme = event.target.getAttribute('name');
+//         document.querySelector('head link:last-of-type').setAttribute('href', theme + '.css');
+//         console.log(document.querySelector('head link:last-of-type'))
+        
+//         //Toggle the visibility of the icons
+//         for (let btn of themeBtns) {
+//             if (btn === event.target) {
+//                 btn.classList.add('hide');
+//                 btn.classList.remove('active');
+//             } else {
+//                 btn.classList.remove('hide');
+//                 btn.classList.add('active')
+//             }
+//         }
+        
+//     }
+// }
+
+let themeBtns = document.querySelectorAll('#theme i');
+let darkModeLink = document.getElementById('dark-mode-link');
+
+for (let themeBtn of themeBtns) {
+    themeBtn.onclick = function(event) {
         let theme = event.target.getAttribute('name');
-        document.querySelector('head link:last-of-type').setAttribute('href', theme + '.css');
-        console.log(document.querySelector('head link:last-of-type'))
-        // Toggle the visibility of the icons
+        
+        //Toggle the visibility of the icons
         for (let btn of themeBtns) {
             if (btn === event.target) {
                 btn.classList.add('hide');
@@ -118,6 +140,11 @@ for(let themeBtn of themeBtns){
                 btn.classList.remove('hide');
                 btn.classList.add('active')
             }
+        }
+        if (theme === 'darkmode') {
+            darkModeLink.setAttribute('rel', 'stylesheet');
+        } else {
+            darkModeLink.setAttribute('rel', 'alternate stylesheet');
         }
         
     }

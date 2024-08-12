@@ -23,6 +23,9 @@ section {
     font-weight: 700;
     font-family: var(--nunito-font);
 }
+#about .content p {
+    color: #000000;
+}
 .card p{
     color: var(--main-bg-color);
 }

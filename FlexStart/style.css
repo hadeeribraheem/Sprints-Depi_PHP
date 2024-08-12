@@ -22,9 +22,10 @@ body{
     color:var(--main-font-color);
 }
 section{
-    color: #444444;
-    background-color: #ffffff;
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
     padding: 60px 0;
+    overflow: clip;
 }
 
 /** For Section titles **/
@@ -253,9 +254,6 @@ nav .btn:hover{
 #Readmore i{
     margin-left: 5px;
     font-size: 18px;
-}
-#about img{
-    margin-left: -25px;
 }
 /*=============== END OF About Section ================*/
 
@@ -786,8 +784,80 @@ nav .btn:hover{
 
 /* ================ END OF Testimonials Section =================*/
 
-/***************/
-/* clients */
+/* ================ START OF Team Section =================*/
+.team .memberCard {
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.team .memberCard .memberImg {
+    position: relative;
+    overflow: hidden;
+}
+.team .memberCard .memberImg:after {
+    position: absolute;
+    content: "";
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    mask: url(images/team-shape.svg) no-repeat center bottom;
+    /* -webkit-mask-size: contain; */
+    mask-size: contain;
+    z-index: 1;
+}
+.team .memberCard .social {
+    position: absolute;
+    right: -100%;
+    top: 30px;
+    opacity: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+    background-color: #aab1b3;
+    z-index: 2;
+}
+.team .memberCard .social a {
+    transition: color 0.3s;
+    color: #616262;
+    margin: 15px 12px;
+    display: block;
+    line-height: 0;
+    text-align: center;
+}
+.team .memberCard:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+.team .memberCard:hover .social {
+    right: 8px;
+    opacity: 1;
+}
+.team .memberCard .memberinfo h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: var(--main_color);
+}
+.team .memberCard .memberinfo h5 {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #b9afbb;
+}
+.team .memberCard .memberinfo p {
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 26px;
+    color: #988997;
+}
+/* ================ END OF Team Section =================*/
+
+
+/* ================ START OF Clients Section =================*/
 .clients  .swiper-slide{
     opacity: 0.5; /* Apply blur */
     transition: opacity 0.3s ease-in-out; /* Smooth transition for the blur effect */
@@ -795,7 +865,123 @@ nav .btn:hover{
 .clients  .swiper-slide:hover{
     opacity: 1; /* Apply blur */
 }
-/***************/
+/* ================ END OF Clients Section =================*/
+
+/* ================ START OF Recent Posts Section =================*/
+.postItem{
+    position: relative;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.postItem .postItemPic{
+    position: relative;
+    overflow: hidden;
+}
+.postItem .postItemPic img {
+    transition: 0.5s;
+}
+.postItem .postItemPic .date {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    background-color: var(--navbar_active);
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 12px;
+    font-weight: 500;
+}
+.postItem .postContent {
+    padding: 30px;
+}
+.postItem .postContent .postTitle {
+    color: var(--main_color);
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+.postContent .postInfo i {
+    font-size: 16px;
+    color: var(--navbar_active);
+}
+.postContent .postInfo span{
+    color: #b8abaf;
+}
+.postContent hr {
+    color: #b8abaf;
+    opacity: 0.1;
+    margin: 20px 0;
+}
+.postContent .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #929799;
+}
+.postContent .readmore i {
+    line-height: 0;
+    margin-left: 6px;
+    font-size: 16px;
+}
+/*hover*/
+.postItem:hover .postItemPic img {
+    transform: scale(1.1);
+}
+.postItem:hover .postTitle, .postItem:hover .readmore {
+    color: var(--navbar_active);
+}
+/* ================ END OF Recent Posts Section =================*/
+
+/* ================ START OF Contacts Section ================= */
+.contact .infoItem {
+    background: #f8f8f8;
+    padding: 30px;
+}
+.contact .infoItem i {
+    font-size: 38px;
+    line-height: 0;
+    color: var(--navbar_active);
+}
+.contact .infoItem h5 {
+    color: var(--main_color);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+.contact .infoItem p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #444444;
+}
+.contact form {
+    background: #f8f8f8;
+    padding: 30px;
+    height: 100%;
+}
+.contact form input[type=text], .contact form input[type=email], .contact form textarea {
+    padding: 10px 15px;
+    color: #444444;
+}
+.contact form button{
+    background: var(--navbar_active);
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+.contact form button:hover{
+    opacity: 0.7;
+}
+/* ================ END OF Contacts Section ================= */
+
 /*========================= START OF Footer =============================*/
 #footer{
     font-size: 14px;
@@ -928,7 +1114,7 @@ nav .btn:hover{
 }
 /*========================= END OF Footer =============================*/
 
-                            /*-- Bach to Top BTN --*/
+                            /*--Back to top to Top BTN --*/
 /* =================================================================*/
 #back-to-top {
     position: fixed;
