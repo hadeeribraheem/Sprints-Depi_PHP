@@ -1,0 +1,241 @@
+:root{
+    --heading-font : 'Raleway','sans-serif';
+    --white-color:#fff;
+    --main-color:#1acc8d;
+    --background-color: #08005e;
+    --font-color: #444444;
+}
+body{
+    font-family: 'Roboto', 'san-serif';
+}
+
+/****************************************************************/
+section {
+    color: var(--font-color);
+    padding: 120px 0;
+    scroll-margin-top: 100px;
+    overflow: clip;
+}
+/********************************************************/
+.intro {
+    width: 100%;
+    min-height: 70vh;
+    position: relative;
+    padding: 120px 0 120px 0;
+    display: flex;
+    align-items: center;
+
+}
+.intro .hero-bg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.intro::after {
+    content: "";
+    
+    background: color-mix(in srgb, var(--background-color), transparent 10%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+.intro .container {
+    position: relative;
+    z-index: 3;
+}
+.intro h1{
+    font-family: var(--heading-font);
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #bab8d2;
+}
+.intro h1 span {
+    color: var(--white-color);
+    border-bottom: 4px solid var(--main-color);
+}
+.intro p {
+    color: #bbbad3;
+    margin: 5px 0 30px 0;
+    font-size: 22px;
+    font-weight: 400;
+}
+#StartBtn {
+    color: var(--white-color);
+    background: var(--main-color);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 12px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    border:0;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+#StartBtn:hover {
+    background: rgb(26, 204, 141, 0.7);
+}
+a{
+    text-decoration: none;
+}
+#WatchBtn {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: var(--white-color);
+    font-weight: 600;
+}
+#WatchBtn:hover{
+    color: var(--main-color);
+
+}
+#WatchBtn i {
+    color: var(--main-color);
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+}
+.intro .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down{
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+.intro .waves {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+/* CSS Animation Code */
+
+.wavy > use {
+	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+
+.wavy > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+
+.wavy > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+}
+
+.wavy > use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+
+
+@keyframes move-forever {
+	0% {
+		transform: translate3d(-90px,0,0);
+	}
+	100% { 
+		transform: translate3d(85px,0,0);
+	}
+}
+/*
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-150px, 0, 0); 
+    }
+    100% { 
+        transform: translate3d(150px, 0, 0); 
+    }
+}*/
+
+/*****************************************************************/
+
+    .aboutUs .content h3{
+        background: #f3fcf9;
+        display: inline-block;
+        color: var(--main-color);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 10px 20px;
+        border-radius: 7px;
+    }
+    
+    .aboutUs h2{
+        font-weight: 700;
+        color:#040677;
+        font-family: var(--heading-font);
+    }
+    .aboutUs a{
+        background-color: var(--main-color);
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 5px;
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        text-decoration: none; 
+        letter-spacing: 1px;
+    
+    }
+    .aboutUs a:hover{
+        background: rgb(26, 204, 141, 0.7);
+    }
+    .aboutUs a i{
+        margin-left: 10px;
+    }
+    /********************************/
+    .aboutUs .icon_box {
+        background-color: white;
+        padding: 50px 40px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease-out 0s;  
+    }
+    .aboutUs .iconBoxes .col-lg-6:nth-child(2) .icon_box, .aboutUs .iconBoxes .col-lg-6:nth-child(4) .icon_box {
+        margin-top: -40px;
+    }
+    .aboutUs .icon_box h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .aboutUs .icon_box i{
+        width: 80px ;
+        height: 80px ;
+        font-size: 32px;
+        background:  #f3fcf9;
+        color: var(--main-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        line-height: 0;
+        margin-bottom: 24px;
+        transition: all 0.4s ease-out 0s;
+
+    }
+    
+    .icon_box:hover i{
+        color: white;
+        background-color: var(--main-color);
+    }
